@@ -13,10 +13,10 @@ jobs:
 
       #build image
       - name: Build Docker Image
-        run: docker build ./venv/app1 -t voltage789/mic:latest
+        run: docker build ./venv/app1 -t andre212121zzz/mic:latest
       #Test
       - name : Run Docker Container
-        run: docker run -p 8000:80 -d voltage789/mic:latest
+        run: docker run -p 8000:80 -d andre212121zzz/mic:latest
       - name: Init Python
         uses: actions/setup-python@v4
         with:
@@ -33,6 +33,6 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push tag to Docker Hub
-        run: docker push voltage789/mic:latest
+        run: docker push andre212121zzz/mic:latest
 
 
