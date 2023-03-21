@@ -1,4 +1,3 @@
-+
 from fastapi import FastAPI
 from app1.document import Document
 
